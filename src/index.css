@@ -1,0 +1,239 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body{
+  background: linear-gradient(135deg,#283246,#477c92) no-repeat;
+  min-height: 100dvh;
+  font-family: "Kode Mono", monospace;
+}
+
+#app__container{
+  margin: auto;
+}
+
+
+header{
+  height: 80px;
+  background: #121a2b;
+  text-align: left;
+}
+
+.width-limit-center{
+  max-width: 1728px;
+  margin: auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.flex-between{
+  justify-content: space-between;
+}
+
+.flex-items-center{
+  align-items: center;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.hero{
+  overflow: hidden;
+  max-height: 80%;
+}
+
+
+.hero__container{
+  margin-top: 116px;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+
+
+.char{
+  text-align: left;
+  width: fit-content;
+  position: absolute;
+  animation: reset 1s ease forwards 1s, rotate 2s ease ;
+  color: #141313;
+  -webkit-text-stroke: 7px #FFFFFF ;
+  paint-order: stroke fill;
+  font-family: monospace;
+}
+
+.left-container{
+  flex-grow: 0.6;
+}
+
+
+
+#name{
+  overflow: hidden;
+  width: 0;
+  animation: showText 1.5s forwards 1.8s steps(14) ;
+  font-size: clamp(40px,6vw,78px);
+  text-wrap: nowrap;
+  color: #141313;
+  -webkit-text-stroke: 4px #FFFFFF ;
+  paint-order: stroke fill;
+  position: relative;
+}
+
+#name::after{
+  content: "";
+  position: absolute;
+  left: 93%;
+  border-left: 2px solid black;
+  animation: lighting 0.75s ease infinite 3s;
+  width: fit-content;
+  height: 100%;
+}
+
+
+#dev{
+  color: #00DA19;
+  -webkit-text-stroke: 12px #000000 ;
+  paint-order: stroke fill;
+  font-size: clamp(42px,6vw,112px);
+  text-shadow: 40px 20px 10px rgba(0, 0, 0, 0.473);
+  font-weight: 500;
+  margin-left: 4%;
+  margin-top: 30px;
+}
+
+.sata{
+  animation: showElement 1s ease forwards 3s;
+  opacity: 0;
+  position: relative;
+}
+
+.circle__container{
+    animation: circle-rotation 20s linear infinite;
+}
+
+
+
+@media ( width <= 1768px) {
+    header{
+      padding: 0 40px;
+    }
+}
+
+
+@media (768px <= width <= 1768px) {
+    .hero__container{
+      padding: 50px;
+    }
+
+    #stack-circle{
+        width: clamp(150px,25vw,260px);
+    }
+
+    #dev{
+      margin-left: 2%;
+    }
+}
+
+
+
+@media (width <= 768px) {
+    .char{
+      animation: reset 1s ease forwards 1s, rotate 2s ease ;
+    }
+
+    .hero__container{
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+  }
+
+    #dev{
+      margin: 20px 0;
+      text-shadow: 0px 25px 10px rgba(0, 0, 0, 0.473);
+    }
+
+
+    .display-center-mobile{
+      place-items: center;
+    }
+
+    #name::after{
+      left: 96%;
+    }
+}
+
+
+
+ 
+
+@keyframes reset {
+  
+  to{
+    top:clamp(15%,20vw,25%);;
+    left: clamp(210px,20vw,5%);
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes showText {
+  to{
+    width: 15ch;
+  }
+}
+
+
+
+@keyframes lighting {
+  13%{
+    border: none;
+  }
+}
+
+
+@keyframes rotate{
+  to{
+   rotate: 90deg;
+  }
+}
+
+
+@keyframes showElement {
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes circle-rotation {
+  to{
+    rotate: 360deg;
+  }
+}
+
+
+
+
+
+
