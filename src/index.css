@@ -14,7 +14,7 @@
 }
 
 body{
-  background: linear-gradient(135deg,#283246,#477c92) no-repeat;
+  background: linear-gradient(130deg,#283246,#477c92);
   min-height: 100dvh;
   font-family: "Kode Mono", monospace;
 }
@@ -26,7 +26,6 @@ body{
 
 header{
   height: 80px;
-  background: #121a2b;
   text-align: left;
 }
 
@@ -71,11 +70,12 @@ header{
   text-align: left;
   width: fit-content;
   position: absolute;
-  animation: reset 1s ease forwards 1s, rotate 2s ease ;
+  animation: reset 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035) forwards 1s, rotate 2s ease ;
   color: #141313;
-  -webkit-text-stroke: 7px #FFFFFF ;
+  -webkit-text-stroke: 4px #FFFFFF ;
   paint-order: stroke fill;
   font-family: monospace;
+  font-size: clamp(58px,6vw,78px);
 }
 
 .left-container{
@@ -94,6 +94,7 @@ header{
   -webkit-text-stroke: 4px #FFFFFF ;
   paint-order: stroke fill;
   position: relative;
+  text-shadow: 17px 10px 5px rgba(0, 0, 0, 0.233);
 }
 
 #name::after{
@@ -104,6 +105,7 @@ header{
   animation: lighting 0.75s ease infinite 3s;
   width: fit-content;
   height: 100%;
+  
 }
 
 
@@ -154,9 +156,6 @@ header{
 
 
 @media (width <= 768px) {
-    .char{
-      animation: reset 1s ease forwards 1s, rotate 2s ease ;
-    }
 
     .hero__container{
       margin-top: 50px;
@@ -188,9 +187,11 @@ header{
 @keyframes reset {
   
   to{
-    top:clamp(15%,20vw,25%);;
-    left: clamp(210px,20vw,5%);
+    /* top:clamp(15%,20vw,30%);
+    left: clamp(200px,20vw,5%); */
+    top: 90%;
     opacity: 0;
+    display: none;
   }
 }
 
