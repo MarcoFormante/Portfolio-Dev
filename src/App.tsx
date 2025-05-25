@@ -15,25 +15,27 @@ function App() {
             <span>asd</span>
           </div>
         </header>
-          <div className='hero width-limit-center'>
-            <div className='hero__container'>
-              <div className='left-container'>
-                <div className='display-center-mobile'>
-                    <CharAnimation text={text}/>
-                    <p id='name'>Marco Formante</p>
-                </div>
-                <div>
-                    <p id='dev' className='sata'>WEB DEVELOPER</p>
-                </div>
-              </div>
+          <main>
+              <div className='hero width-limit-center'>
+                <div className='hero__container'>
+                  <div className='left-container'>
+                    <div className='display-center-mobile'>
+                        <CharAnimation text={text}/>
+                        <p id='name'>Marco Formante</p>
+                    </div>
+                    <div>
+                        <p id='dev' className='sata'>WEB DEVELOPER</p>
+                    </div>
+                  </div>
 
-              <div className='sata circle'>
-                <div className='circle__container'>
-                 <img id='stack-circle' src={stackCircle} alt="Marco Formante dev Stack" />
+                  <div className='sata circle'>
+                    <div className='circle__container'>
+                    <img id='stack-circle' src={stackCircle} alt="Marco Formante dev Stack" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+          </main>
         </div>
     </div>
     
